@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  external-api:
+    build:
+      context: .
+    command: ["node", "${SCRIPTS_FOLDER}/external-api.js"]
+    networks:
+      - ${CONTAINER_NETWORK} 
+  internal-api:
+    build:
+      context: .
+    command: ["node", "${SCRIPTS_FOLDER}/internal-api.js"]
+    networks:
+      - ${CONTAINER_NETWORK} 
+  cronjob:
+    build:
+      context: .
+    command: ["node", "${SCRIPTS_FOLDER}/cronjob.js"]
+    networks:
+      - ${CONTAINER_NETWORK} 
+networks:
+  devin-network:
