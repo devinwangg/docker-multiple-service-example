@@ -34,6 +34,6 @@ The `cronjob.js` script will execute scheduled jobs at predefined intervals.
 
 You can use the provided makefile for easier setup, teardown, and other utility commands.
 
-## Supplementary Notes
+## Notes
 
 This project serves purely as a demonstration of the infrastructure. Depending on practical scenarios, you can adjust the actual service launch methods and implementation details to suit your situation.
